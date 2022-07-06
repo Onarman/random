@@ -21,7 +21,7 @@ console.log(user);
     <div className="App">
       <Card user={user}/>
       
-      <button className='text-center bg-danger d-flex mx-auto rounded mt-3' onClick={() =>getData()}>Random User</button>
+      <button className='text-center bg-danger d-flex mx-auto rounded mt-3 border p-3 text-light border-none' onClick={() =>getData()}>Random User</button>
     </div>
   );
 }

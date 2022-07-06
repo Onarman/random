@@ -1,6 +1,9 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { FiMail,
+    FiMap ,
+ } from "react-icons/fi";
+ import {FaTransgender,FaBirthdayCake} from "react-icons/fa"
 
 
 const Card = ({user}) => {
@@ -9,7 +12,7 @@ const Card = ({user}) => {
         picture:{ large },
         name : {title,first,last},
         dob:{age},
-        gender:{gender},
+        gender,
         location:{city,country},
         email
     } = user
@@ -18,15 +21,15 @@ const Card = ({user}) => {
    
     
   return (
-        <div className=' p-4 border border-dark d-flex justify-content-center bg-info mt-5 w-50 '>
-            <div className='card-container text-center   mt-5 rounded  '>
+        <div className=' main-container d-flex align-item-center justify-content-center  mt-4  '>
+            <div className='card-container  rounded   min-w-50 p-5 shadow-lg  text-dark  '>
         
-            <img className='rounded-5 mt-3' src= {large}alt="" />
-            <h1>{`${title}.${first} ${last}`}</h1>  
-            <h2>{age}</h2>
-            <h2>{gender}</h2>
-            <h2>{`${city}/${country}`}</h2>
-            <h2>{email}</h2> 
+            <img className='rounded-2 mt-3 d-flex mx-auto' src= {large}alt="" />
+            <h1 className='text-center mb-5 mt-2 ' >{`${title}.${first} ${last}`}</h1>  
+            <h3><FaBirthdayCake size={30} className='text-dark me-3'/>{age}</h3>
+            <h3><FaTransgender size={30} className='text-left text-dark me-3 '/>{gender}</h3>
+            <h3>< FiMap size={30} className='text-dark me-3'/>{`${city}/${country}`}</h3>
+            <h3><FiMail size={30}  className='text-dark me-3' />{email}</h3> 
        
      </div>
 </div>
